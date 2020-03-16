@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Triki</h1>
+        <label>
+            Jugador 1 (X):
+            <input type="text" v-model="playerOneName" />
+        </label>
+        <br /><br />
+        <label>
+            Jugador 2 (O):
+            <input type="text" v-model="playerTwoName" />
+        </label>
+
+        <br /><br />
+        <label>Turno: {{turn == 1 ? playerOneName:playerTwoName}}</label>
+        <table border="1">
+            <tr>
+                <td @click="onClickBox(0)">{{boxes[0]}}</td>
+                <td @click="onClickBox(1)">{{boxes[1]}}</td>
+                <td @click="onClickBox(2)">{{boxes[2]}}</td>
+            </tr>
+
+            <tr>
+                <td @click="onClickBox(3)">{{boxes[3]}}</td>
+                <td @click="onClickBox(4)">{{boxes[4]}}</td>
+                <td @click="onClickBox(5)">{{boxes[5]}}</td>
+            </tr>
+
+            <tr>
+                <td @click="onClickBox(6)">{{boxes[6]}}</td>
+                <td @click="onClickBox(7)">{{boxes[7]}}</td>
+                <td @click="onClickBox(8)">{{boxes[8]}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="./lib/js/vue.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
